@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
-import { GraduationCap, TrendingUp, Users } from 'lucide-react';
+import { TrendingUp, Users, GraduationCap } from 'lucide-react';
+import hkuLogo from '../assets/workshop/hku-logo.png';
 
 const InternScaling: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const InternScaling: React.FC = () => {
           </div>
           <div className="partnership-badge">
             <div className="badge-inner">
-              <GraduationCap size={40} className="badge-icon" />
+              <img src={hkuLogo} alt="HKU Logo" className="hku-logo-badge" />
               <div>
                 <span className="badge-label">Official Partnership</span>
                 <span className="badge-title">HKU AI Intern Program</span>
@@ -87,7 +88,7 @@ const InternScaling: React.FC = () => {
 
         .partnership-badge {
           background: white;
-          padding: 40px;
+          padding: 30px;
           border-radius: 24px;
           border: 2px solid var(--accent-blue);
           box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1);
@@ -96,11 +97,13 @@ const InternScaling: React.FC = () => {
         .badge-inner {
           display: flex;
           align-items: center;
-          gap: 20px;
+          gap: 24px;
         }
 
-        .badge-icon {
-          color: var(--accent-blue);
+        .hku-logo-badge {
+          height: 80px;
+          width: auto;
+          object-fit: contain;
         }
 
         .badge-label {
