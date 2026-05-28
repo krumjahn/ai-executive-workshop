@@ -4,6 +4,7 @@ import { Play, ExternalLink, Quote } from 'lucide-react';
 import classPhoto1 from '../assets/workshop/class-photo-1.jpg';
 import classPhoto2 from '../assets/workshop/class-photo-2.jpg';
 import keithLecturing from '../assets/workshop/keith-lecturing.jpg';
+import keithProfile from '../assets/workshop/keith-profile.jpg';
 import esperanzaLogo from '../assets/workshop/esperanza-logo.png';
 import youtubeScreenshot from '../assets/workshop/youtube-screenshot.png';
 
@@ -103,7 +104,7 @@ const SocialProof: React.FC = () => {
 
         <div className="instructor-card card">
           <div className="instructor-image">
-            <img src={keithLecturing} alt="Keith Rumjahn" className="instructor-img-real" />
+            <img src={keithProfile} alt="Keith Rumjahn" className="instructor-img-real" />
           </div>
           <div className="instructor-info">
             <h3 className="instructor-name">Keith Rumjahn</h3>
