@@ -4,6 +4,8 @@ import { Play, ExternalLink, Quote } from 'lucide-react';
 import classPhoto1 from '../assets/workshop/class-photo-1.jpg';
 import classPhoto2 from '../assets/workshop/class-photo-2.jpg';
 import keithLecturing from '../assets/workshop/keith-lecturing.jpg';
+import esperanzaLogo from '../assets/workshop/esperanza-logo.png';
+import youtubeScreenshot from '../assets/workshop/youtube-screenshot.png';
 
 const SocialProof: React.FC = () => {
   const testimonials = [
@@ -51,6 +53,11 @@ const SocialProof: React.FC = () => {
           This programme builds on the success of our previous AI in Action Bootcamp, where 40 professionals joined a practical, hands-on AI training experience focused on real workflows, practical tools, and implementation.
         </p>
 
+        <div className="partner-section">
+          <p className="partner-label">Supported by</p>
+          <img src={esperanzaLogo} alt="Esperanza Logo" className="partner-logo" />
+        </div>
+
         <div className="workshop-visuals">
           <div className="visual-main">
             <img src={classPhoto1} alt="Previous AI Workshop Class" className="workshop-img" />
@@ -62,6 +69,20 @@ const SocialProof: React.FC = () => {
             <div className="visual-secondary">
               <img src={classPhoto2} alt="Workshop students working" className="workshop-img" />
             </div>
+          </div>
+        </div>
+
+        <div className="youtube-showcase card">
+          <div className="yt-text">
+            <h3>Practical AI Education</h3>
+            <p>Keith's practical AI tutorials have reached hundreds of thousands of professionals worldwide, helping them bridge the gap between AI curiosity and real-world implementation.</p>
+            <a href="https://youtube.com/@keithrumjahn" target="_blank" rel="noopener noreferrer" className="btn btn-secondary yt-btn">
+              <Play size={18} fill="currentColor" />
+              Watch on YouTube
+            </a>
+          </div>
+          <div className="yt-preview">
+            <img src={youtubeScreenshot} alt="YouTube Channel Preview" className="yt-img" />
           </div>
         </div>
 
@@ -91,8 +112,8 @@ const SocialProof: React.FC = () => {
               Keith is an AI educator, workflow builder, and creator of practical AI training content with hundreds of thousands of YouTube views. He specialises in helping business professionals move from AI curiosity to practical implementation.
             </p>
             <div className="instructor-links">
-              <a href="#" className="link-item"><Play size={16} /> YouTube</a>
-              <a href="#" className="link-item"><ExternalLink size={16} /> LinkedIn</a>
+              <a href="https://youtube.com/@keithrumjahn" target="_blank" rel="noopener noreferrer" className="link-item"><Play size={16} /> YouTube</a>
+              <a href="https://linkedin.com/in/keithrumjahn" target="_blank" rel="noopener noreferrer" className="link-item"><ExternalLink size={16} /> LinkedIn</a>
             </div>
           </div>
         </div>
@@ -107,16 +128,43 @@ const SocialProof: React.FC = () => {
         .proof-lead {
           font-size: 1.25rem;
           color: var(--secondary-charcoal);
-          margin-bottom: 60px;
+          margin-bottom: 40px;
           text-align: center;
           line-height: 1.6;
+        }
+
+        .partner-section {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+
+        .partner-label {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: var(--text-muted);
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+
+        .partner-logo {
+          height: 60px;
+          width: auto;
+          opacity: 0.9;
+          filter: grayscale(1);
+          transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+          filter: grayscale(0);
+          opacity: 1;
         }
 
         .workshop-visuals {
           display: grid;
           grid-template-columns: 1.5fr 1fr;
           gap: 20px;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
         }
 
         .visual-main {
@@ -148,6 +196,47 @@ const SocialProof: React.FC = () => {
 
         .workshop-img:hover {
           transform: scale(1.05);
+        }
+
+        .youtube-showcase {
+          display: grid;
+          grid-template-columns: 1fr 1.2fr;
+          gap: 40px;
+          align-items: center;
+          padding: 40px;
+          margin-bottom: 80px;
+          background: white;
+          border-radius: 24px;
+        }
+
+        .yt-text h3 {
+          font-size: 1.75rem;
+          margin-bottom: 16px;
+        }
+
+        .yt-text p {
+          font-size: 1.1rem;
+          color: var(--secondary-charcoal);
+          margin-bottom: 24px;
+          line-height: 1.5;
+        }
+
+        .yt-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .yt-preview {
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .yt-img {
+          width: 100%;
+          height: auto;
+          display: block;
         }
 
         .testimonials-grid {
@@ -261,6 +350,13 @@ const SocialProof: React.FC = () => {
           }
           .workshop-visuals {
             grid-template-columns: 1fr;
+          }
+          .youtube-showcase {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+          .yt-btn {
+            justify-content: center;
           }
         }
 
