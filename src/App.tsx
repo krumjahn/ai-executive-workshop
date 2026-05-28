@@ -5,6 +5,7 @@ import Opportunity from './components/Opportunity';
 import CoreOffer from './components/CoreOffer';
 import Comparison from './components/Comparison';
 import Programme from './components/Programme';
+import InternScaling from './components/InternScaling';
 import Tools from './components/Tools';
 import Support from './components/Support';
 import Audience from './components/Audience';
@@ -25,6 +26,7 @@ function App() {
         <CoreOffer />
         <Comparison />
         <Programme />
+        <InternScaling />
         <Tools />
         <Support />
         <Audience />
