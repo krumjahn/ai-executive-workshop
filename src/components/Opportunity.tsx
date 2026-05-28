@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import { Briefcase, Zap } from 'lucide-react';
+import genZTAs from '../assets/workshop/gen-z-tas.jpg';
 
 const Opportunity: React.FC = () => {
   return (
@@ -10,9 +11,17 @@ const Opportunity: React.FC = () => {
       bgOffWhite
     >
       <div className="opportunity-content">
-        <p className="lead-text">
-          At the same time that AI is reducing traditional entry-level opportunities, many Gen Z students and fresh graduates are already AI-native. They are comfortable experimenting with new tools, building workflows, and learning fast. This workshop channels that energy into real organisational AI transformation.
-        </p>
+        <div className="opportunity-header-grid">
+          <div className="opportunity-text">
+            <p className="lead-text">
+              At the same time that AI is reducing traditional entry-level opportunities, many Gen Z students and fresh graduates are already AI-native. They are comfortable experimenting with new tools, building workflows, and learning fast. This workshop channels that energy into real organisational AI transformation.
+            </p>
+          </div>
+          <div className="opportunity-image-wrapper">
+            <img src={genZTAs} alt="Gen Z Reverse Mentors" className="tas-img" />
+            <div className="img-caption">Our trained Gen Z Reverse Mentors</div>
+          </div>
+        </div>
 
         <div className="comparison-grid">
           <div className="card mentor-card">
@@ -53,15 +62,47 @@ const Opportunity: React.FC = () => {
 
       <style>{`
         .opportunity-content {
-          max-width: 1000px;
+          max-width: 1100px;
           margin: 0 auto;
+        }
+
+        .opportunity-header-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+          margin-bottom: 60px;
         }
 
         .lead-text {
           font-size: 1.25rem;
           color: var(--secondary-charcoal);
-          margin-bottom: 48px;
           line-height: 1.6;
+          margin: 0;
+        }
+
+        .opportunity-image-wrapper {
+          position: relative;
+        }
+
+        .tas-img {
+          width: 100%;
+          height: auto;
+          border-radius: 24px;
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-caption {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          background: rgba(10, 25, 47, 0.8);
+          color: white;
+          padding: 8px 16px;
+          border-radius: 12px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          backdrop-filter: blur(4px);
         }
 
         .comparison-grid {
@@ -128,6 +169,14 @@ const Opportunity: React.FC = () => {
         .bridge-text {
           font-size: 1.5rem;
           margin: 0;
+        }
+
+        @media (max-width: 992px) {
+          .opportunity-header-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            text-align: center;
+          }
         }
 
         @media (max-width: 768px) {
